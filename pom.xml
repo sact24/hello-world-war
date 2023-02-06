@@ -47,6 +47,34 @@
                            </http://65.0.134.243:9000>
                   </properties>
                 </profile>
+				  <dependency>
+    <groupId>org.jacoco</groupId> 
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.6</version>
+</dependency>
+Copy
+Next, let's configure the plugin that integrates our Maven project with JaCoCo:
+
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>${jacoco.version}</version>
+    <executions>
+        <execution>
+            <id>jacoco-initialize</id>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>jacoco-site</id>
+            <phase>package</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
 
 	</build>
 
