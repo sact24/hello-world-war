@@ -18,12 +18,12 @@
 					<scanIntervalSeconds>0</scanIntervalSeconds>
 				</configuration>
 			</plugin>
-			<plugin>
+			<plugins>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.1.1</version>
 	               </plugin>
-		       </plugin>
+		       </plugins>
 		
                                 <groupId>org.jacoco</groupId>
                                 <artifactId>jacoco-maven-plugin</artifactId>
