@@ -24,6 +24,30 @@
 				<version>2.1.1</version>
 			</plugin>
 		</plugins>
+		
+                         <groupId>org.sonarsource.scanner.maven</groupId>
+                         <artifactId>sonar-maven-plugin</artifactId>
+                         <packaging>pom</packaging>
+			 <version>8.9.10 </version>
+
+                         <!-- Point the Sonar Qube Plugin always to the same aggregated JaCoCo report -->
+                         <sonar.coverage.jacoco.xmlReportPaths>
+                             ${project.basedir}/../module-c/target/site/jacoco-aggregate/jacoco.xml
+                        </sonar.coverage.jacoco.xmlReportPaths>
+			  <profiles>
+                   <profile>
+                         <id>sonar</id>
+                         <activation>
+                            <activeByDefault>true</activeByDefault>
+                         </activation>
+                         <properties>
+                             <!-- Optional URL to server. Default value is http://65.0.134.243:9000 -->
+                             <http://65.0.134.243:9000>
+                                http://http://65.0.134.243:9000
+                           </http://65.0.134.243:9000>
+                  </properties>
+                </profile>
+
 	</build>
 
 </project>
