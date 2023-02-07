@@ -17,7 +17,9 @@
 				<configuration>
 					<scanIntervalSeconds>0</scanIntervalSeconds>
 				</configuration>
-		  </plugin>
+	<groupId>			
+		  </plugins>
+			</plugin>
 			   
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
